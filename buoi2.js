@@ -38,35 +38,35 @@
  * Gợi ý: đây là bài tập khó, bạn nên tìm hiểu về recursive trước
  */
 
-var apartment = {
-    bedroom: {
-      area: 20,
-      bed: {
-        type: 'twin-bed',
-        price: 100
-      }
-    }
-  };
+// var apartment = {
+//     bedroom: {
+//       area: 20,
+//       bed: {
+//         type: 'twin-bed',
+//         price: 100
+//       }
+//     }
+//   };
   
-  function getkey(object){
-      for (const key in object) {
-          console.log(key)
-          // cach viet 1
-          if(typeof object[key] === "object"){
-              getkey(object[key])
-          }
-        //   cach viet 2
-        for(const keyBedroom in object[key]){
-        //       console.log(keyBedroom)
-        //       for(const keyBed in object[key][keyBedroom]){
-        //           console.log(keyBed)
-        //       }
+//   function getkey(object){
+//       for (const key in object) {
+//           console.log(key)
+//           // cach viet 1
+//           if(typeof object[key] === "object"){
+//               getkey(object[key])
+//           }
+//         //   cach viet 2
+//         // for(const keyBedroom in object[key]){
+//         //       console.log(keyBedroom)
+//         //       for(const keyBed in object[key][keyBedroom]){
+//         //           console.log(keyBed)
+//         //       }
 
-        //   }
-      }
-  }
+//         //   }
+//       }
+//   }
   
-  getkey(apartment)
+//   getkey(apartment)
   
   /**
    * Kết quả mong muốn:
@@ -78,5 +78,12 @@ var apartment = {
    * Chú ý: không cần hiển thị ra đúng thứ tự như trên
    */
   
-    
+    //10. ARRAY METHOD
+const numbers = [5,1,2,3,4]
+// them phan tu o cuoi
+// numbers.push(10)
+// console.log(numbers)
+// xoa phan tu o cuoi
+numbers.pop()
+console.log(numbers)
 
