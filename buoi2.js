@@ -18,12 +18,20 @@
 //     console.log(key)
 //}
 // for in tim va lay gia tri object
-const teo = {
-    name : "nguyen van teo",
-    age : 10
-}
-for (const key in teo) {
-    console.log(key)
-}
+// const teo = {
+//     name : "nguyen van teo",
+//     age : 10
+// }
+// for (const key in teo) {
+//     console.log(key)
+// }
 // interabal manng tim lay du lieu thong qua index
 // object tim  va lay du lieu thong qua thuoc tinh cua bien
+// thuc hanh bai tap
+var a = [1, 2, 4, 8, 16]
+// su dung vong lap for de lay gia tri tu cuoi tre ve
+for(var i = a.length - 1; i >= 0; i--){
+    console.log(a[i])
+}
+    
+
