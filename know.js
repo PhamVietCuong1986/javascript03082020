@@ -40,7 +40,7 @@ hay khog
 // console.log(amount);
 // state la thay doi kieu gia tri cua bien khi chay chuong trinh
 // khai bao bien Constance
-// neu chuong trinh gia tri cua bien khong doi khi thuc hien phai khai bao const, con gia tri bien thay doi theo bieu thuc thi la var
+// neu chuong trinh gia tri cua bien khong doi khi thuc hien phai khai bao const
 
 // var tax = 0.08 ;
 // var  amount = 99.99;
@@ -48,12 +48,30 @@ hay khog
 // amount = amount + (amount * tax);
 // console.log(amount);
 // console.log(amount.toFixed(2));
-var TAX_RATE = 0.08 ;
-var a = 11.11;
-a = a*2;
-a = a + (a * TAX_RATE);
-console.log(a);
-console.log(a.toFixed(3));
+// var TAX_RATE = 0.08 ;
+// var a = 11.11;
+// a = a*2;
+// a = a + (a * TAX_RATE);
+// console.log(a);
+// console.log(a.toFixed(3));
+
+// BLOCKS 1 Block duoc xac dinh bang cac bao mot hoac nhieu lenh trong dau ngoac {}
+// block thuong duoc gan lenh dieu khien IF hoac vong lap FOR
+
+// var  amount = 99.99;
+// if(amount > 10) {
+//     amount = amount * 2;
+//     console.log(amount);
+// }
+// sau dau {} khong co dau ;
+// 2 lenh trong {} chi duoc thuc hien neu thoa man dieu kien amount > 10, neu khong se bo qua 2 lenh trong block
+
+ // DIEU KIEN IF
+
+ 
+
+
+
 
 
 
