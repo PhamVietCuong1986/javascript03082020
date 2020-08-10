@@ -21,8 +21,24 @@
 // console.log(a);
 // console.log(b);
 // phep so sanh
-var a = "42";
-var b = 42;
-var c = a != b;
-console.log(c)
+// var a = "42";
+// var b = 42;
+// var c = a != b;
+// console.log(c)
+// may tinh chi quan tam ma may chuoi nhi phan OS va 1S den bien dich
+// comment dong don
+/* comment nhieu dong
+doan the trong html
+hay khog
+*/
+// variable 
+// Mot vai ngon ngu lap trinh bien de chua mot gia tri theo mot kieu rieng biet (bien thuc thi)
+// mot vai ngon ngu nhan manh kieu cho bien dynamic typing. bien dai dien cho mot gia tri du la kieu gia tri gi (Java script)
+var amount = 99.99;
+amount = amount*2;
+amount = "$" + String(amount);
+console.log(amount);
+// state la thay doi kieu gia tri cua bien khi chay chuong trinh
+
+
 
