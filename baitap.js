@@ -11,14 +11,14 @@
 // var today = 'sunday';
 // var isCloudy = true;
 // var currentTemperature = 30;
-// var person = {name : 'Pham tan phat',
-// age : 20,
-// gender : female
-// }
-// console.log(person.name)
+var person = { name : 'Pham tan phat',
+age : 20,
+gender : female
+}
+console.log(person.gender)
 // var animal = { turkey : {name : "khi",
 // age : 2}, elephant : {name = "voi",
 // age : 10}}
 // console.log(animal.elephant)
-var a = 5
-console.log(a)
+// var a = 5
+// console.log(a)
