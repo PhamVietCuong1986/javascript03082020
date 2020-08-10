@@ -84,6 +84,15 @@ const numbers = [5,1,2,3,4]
 // numbers.push(10)
 // console.log(numbers)
 // xoa phan tu o cuoi
-numbers.pop()
+// numbers.pop()
+// them phan tu o dau
+// numbers.unshift(10)
+// xoa phan tu o dau
+// numbers.shift()
+// xoa phan tu o giua
+// numbers.splice(1,1)
+// them phan tu o giua
+// numbers.splice(0,0,10)
+numbers.splice(-1,0,10)
 console.log(numbers)
 
