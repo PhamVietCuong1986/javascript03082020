@@ -16,8 +16,13 @@
 // may tinh chi hieu va thuc hien cac phep tinh dang kieu number
 // de nguoi dung nhin thay tren man hinh no thuoc kieu string
 // cac con so nguoi dung nhin thay duoc tren man hinh khi no da duoc chuyen doi tu number sang string
+// var a = "42";
+// var b = Number(a);
+// console.log(a);
+// console.log(b);
+// phep so sanh
 var a = "42";
-var b = Number(a);
-console.log(a);
-console.log(b);
+var b = 42;
+var c = a != b;
+console.log(c)
 
