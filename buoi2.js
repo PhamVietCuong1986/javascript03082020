@@ -51,13 +51,18 @@ var apartment = {
   function getkey(object){
       for (const key in object) {
           console.log(key)
-          for(const keyBedroom in object[key]){
-              console.log(keyBedroom)
-              for(const keyBed in object[key][keyBedroom]){
-                  console.log(keyBed)
-              }
-
+          // cach viet 1
+          if(typeof object[key] === "object"){
+              getkey(object[key])
           }
+        //   cach viet 2
+        for(const keyBedroom in object[key]){
+        //       console.log(keyBedroom)
+        //       for(const keyBed in object[key][keyBedroom]){
+        //           console.log(keyBed)
+        //       }
+
+        //   }
       }
   }
   
