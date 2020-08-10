@@ -34,11 +34,26 @@ hay khog
 // variable 
 // Mot vai ngon ngu lap trinh bien de chua mot gia tri theo mot kieu rieng biet (bien thuc thi)
 // mot vai ngon ngu nhan manh kieu cho bien dynamic typing. bien dai dien cho mot gia tri du la kieu gia tri gi (Java script)
-var amount = 99.99;
-amount = amount*2;
-amount = "$" + String(amount);
-console.log(amount);
+// var amount = 99.99;
+// amount = amount*2;
+// amount = "$" + String(amount);
+// console.log(amount);
 // state la thay doi kieu gia tri cua bien khi chay chuong trinh
+// khai bao bien Constance
+// neu chuong trinh gia tri cua bien khong doi khi thuc hien phai khai bao const, con gia tri bien thay doi theo bieu thuc thi la var
+
+// var tax = 0.08 ;
+// var  amount = 99.99;
+// amount = amount * 2;
+// amount = amount + (amount * tax);
+// console.log(amount);
+// console.log(amount.toFixed(2));
+var TAX_RATE = 0.08 ;
+var a = 11.11;
+a = a*2;
+a = a + (a * TAX_RATE);
+console.log(a);
+console.log(a.toFixed(3));
 
 
 
