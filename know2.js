@@ -304,19 +304,43 @@ Cho phep khai bao bien cho tung BLOCK rieng biet {}
 // MOI TUONG QUAN 
 // ham add() duoc tra voi moi lan goi ham makeAdder() tren no la ghi nho gia tri x duoc truyen vao ham makeAdder()
 
-Function makeAdder(x){
-    function add(y){
-        return y + x;
-        };
-        return add;
-}
+// Function makeAdder(x){
+//     function add(y){
+//         return y + x;
+//         };
+//         return add;
+// }
 
-var plusOne = makeAdder(1);//x=1
-var plusTen = makeAdder(10);//x=10
-plusOne(3);//y=3,x=1, add = 3+1
-plusOne(10)
-plusTen(13);
-plusTen(15);
+// var plusOne = makeAdder(1);//x=1
+// var plusTen = makeAdder(10);//x=10
+// plusOne(3);//y=3,x=1, add = 3+1
+// plusOne(10)
+// plusTen(13);
+// plusTen(15);
+
+// MODULES 
+// cach su dung DONG KIN CLOSURE trong JS la Modules pattern "mau mo dun"
+// Modules cho phep ban xac dinh cac chi tiet (bien, ham) thuc hien khep kin CLOSURE theo ca the an khoi cac yeu to ben ngoai
+// khong giong voi API
+
+// VI DU MAU MODULE
+ Function User(){
+     var username , password;
+     function doLogin(user,pw){
+         username = user;
+         password = pw;
+         var publicAPI = {
+             login : doLogin
+         }; 
+         return publicAPI;
+         
+        }
+ }
+ // Tao mot Module User
+
+var fred = User();
+fred.login("fred" , "12Baterry34!");
+
 
 
 
