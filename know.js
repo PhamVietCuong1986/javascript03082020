@@ -154,17 +154,37 @@ Code ben trong no se chay cho moi lan goi
 // ham print thay the cho console.log()
 // vi du 2
 
-function printAmount(amt) {
-    console.log(amt.toFixed(2));
+// function printAmount(amt) {
+//     console.log(amt.toFixed(2));
     
-}
-function formatAmount() {
-    return "$" + amount.toFixed(2);
+// }
+// function formatAmount() {
+//     return "$" + amount.toFixed(2);
+// }
+// // var amount = 99.99;
+// printAmount(amount*2);
+// amount = formatAmount();
+// console.log(amount);
+
+// vi du 2
+// bieu thuc cua tham so khi chua khai bao bien
+// khi co bien thi bien tu dong thay the cho tham so
+// tham so chi gia tri minh hoa cong thuc bieu thi cho ham function
+//gia tri cuoi cung cua function
+const TAX_RATE = 0.08;
+function caculaterFinalPurchaseAmount(amty) {
+    amty = amty + (amty * TAX_RATE );
+    return amty; 
 }
 var amount = 99.99;
-printAmount(amount*2);
-amount = formatAmount();
-console.log(amount);
+amount = caculaterFinalPurchaseAmount(amount);
+console.log(amount.toFixed(2));
+// tham so amt chang qua tham so de hien dien cho cach thuc tinh bieu thuc tham so hinh thuc
+// tham so khong can khai bao
+// khi khai bao bien thi bien the vao vi tri tham so de tinh gia tri bieu thuc
+
+
+
 
 
 
