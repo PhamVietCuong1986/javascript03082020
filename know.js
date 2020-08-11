@@ -66,7 +66,16 @@ hay khog
 // sau dau {} khong co dau ;
 // 2 lenh trong {} chi duoc thuc hien neu thoa man dieu kien amount > 10, neu khong se bo qua 2 lenh trong block
 
- // DIEU KIEN IF
+ // DIEU KIEN IF. neu dieu kien nay dung hay lam theo {} cac lenh trong block
+ // IF duoc thuc thi trong dau () de the hien nhu la true hoac False
+ var bank_balance = 301.23;
+ var amount = 99.99;
+ if( amount > bank_balance) {
+     console.log(" i want to buy this phone");
+ }
+
+
+
 
  
 
