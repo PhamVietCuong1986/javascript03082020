@@ -208,45 +208,68 @@ Ten bien ben trong 1 SCOPE phai la duy nhat,
 Nhung bien a co the trung nhau ben trong cac SCOPE khac nhau
 */
 // vi du
-function one() {
-    var a = 1;
-    console.log(a);
+// function one() {
+//     var a = 1;
+//     console.log(a);
     
-}
-function two() {
-    var a = 2;
-    console.log(a);
+// }
+// function two() {
+//     var a = 2;
+//     console.log(a);
     
-}
-one;
-two;
+// }
+// one;
+// two;
 // 1 Scope co the long trong nhieu scope khac
 // Code ben trong scope sau nhat co the tiep can moi bien o cac pham vi
 
-function outer() {
-    var a = 1;
-    function inner() {
-        var b = 2;
-        console.log(a + b);// 3
+// function outer() {
+//     var a = 1;
+//     function inner() {
+//         var b = 2;
+//         console.log(a + b);// 3
         
-    }
-    inner();
-    console.log(a);// 1 bien b khong anh huong den pham vi nay
-}
-outer;
+//     }
+//     inner();
+//     console.log(a);// 1 bien b khong anh huong den pham vi nay
+// }
+// outer;
  // bai tap
  /* ban co tai khoan 303.21 $
- bạn đặt ngưỡng chi tiêu mình là 200$
+ Ngưỡng mua pk 200$
  bạn cân mua điện thoại giá 99.99$
  giá phụ kiện 9.99 $
  Thuế chính phủ 0.08
  bạn cần tính xem mình có thể mua bao nhiêu điện thoại
+ cho den khi het tien trong tai khoan
+ Bạn mua phụ kiện nếu tiền chưa vượt ngưỡng 200$
  bao nhiêu phụ kiện
  số tiền chi trả bao nhiêu, số tiền còn lại bao nhiêu
+ định dang ham tien chi tra và thue là $ trong 2 thap phan
  */
-
-
-
+const TAX_RATE = 0.08;
+const PHONE_PRICE = 99.99;
+const ACESSORY_PRICE = 9.99;
+const SPENDING_THRESHOLD = 200;
+var amount = 0;
+var bank_balance = 350;
+function CaculateTax(amt) {
+      return  amt * TAX_RATE;
+}
+function FormatAmount(at) {
+    return "$" + at.toFixed(2);
+}
+while(amount < bank_balance ){
+    amount = amount + PHONE_PRICE;
+    if(amount < SPENDING_THRESHOLD){
+        amount =amount + ACESSORY_PRICE;
+    }
+}
+amount = amount + CaculateTax(amount);
+console.log(" your purchase" + FormatAmount(amount));
+if (amount > bank_balance){
+    console.log("you can't afford your purchase" + ": ban khong tra noi");
+}
 
 
 
