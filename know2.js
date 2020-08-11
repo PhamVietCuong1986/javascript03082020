@@ -286,12 +286,12 @@ Cho phep khai bao bien cho tung BLOCK rieng biet {}
 // hai ham tren muon thuc hien can them dong lenh foo(); vaf x();
  // immediatelly invoked function expressions (IIFEs) Ham bieu thuc thuc hien ngay lap tuc
 
- (function IIFEs(){
-     console.log("hello");
+//  (function IIFEs(){
+//      console.log("hello");
 
- })();// chay duoc ket qua luon
- // IIFEs theo cach nay de khai bao bien khong anh huong den CODE ben ngoai IIFEs
- // vidu
+//  })();// chay duoc ket qua luon
+//  // IIFEs theo cach nay de khai bao bien khong anh huong den CODE ben ngoai IIFEs
+//  // vidu
   var a = 42;
   (function IIFEs(){
       var a = 10;
