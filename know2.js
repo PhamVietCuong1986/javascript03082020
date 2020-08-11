@@ -197,22 +197,76 @@ cung duoc dung de so sanh String su dung nguyen tac alphabe ("bar" < "foo")
 Khong nen su dung
 2. Scope long nhau
 khi ban khai bao 1 bien no co hieu luc trong pham vi do ke ca pham vi con
- */
-function foo() {
-    var a = 1;
-    function bar(){
-        var b  = 3;
-        function baz(){
-            var c = 5;
-            console.log(a,b,c);
-        }
-        baz();// chu y cau truc function
-        console.log(a,b);
-    }
-    bar();// chu y cau truc function
-   console.log(a);
-}
-foo();// chu y cau truc function
+//  */
+// function foo() {
+//     var a = 1;
+//     function bar(){
+//         var b  = 3;
+//         function baz(){
+//             var c = 5;
+//             console.log(a,b,c);
+//         }
+//         baz();// chu y cau truc function
+//         console.log(a,b);
+//     }
+//     bar();// chu y cau truc function
+//    console.log(a);
+// }
+// foo();// chu y cau truc function
+
+// var c co tac dung trong function baz, 
+// var b co tac dung bar, baz
+// var a co tac dung foo, bar, baz
+
+/* phuong thuc khai bao bien cho function dung LET
+Cho phep khai bao bien cho tung BLOCK rieng biet {}
+*/
+// function foo(){
+// var a = 1;
+// if(a >=1){
+// let b = 2;
+// while (b < 5){
+//     let c =b *2  ;
+//     b++;
+//     console.log(a+c);
+//              }
+//          }
+// }
+// foo();
+
+// DIEU KIEN trong JS
+/* SWITCH thay cho IF else if
+*/
+// switch(a){
+//        case 2: 
+//        print("lam gi do");
+//        break;
+//     case 10:
+//     print("lm gi do khac");
+//     break;
+
+//     case 42:
+//         print("lam gi do khac nua")
+//         break;
+//         default :
+//         print("khong lam gi ca");
+// }
+ 
+//DIEU HANH DIEU KIEN "Toan tu bac 3"
+// No thay the cho IF .. ELSE
+ 
+// var a = 40;
+// var b = (a > 41) ? "hello" : "world";
+// tuong tu voi doan lenh sau
+var a = 42;
+ if (a > 41){
+     b = "hello";}
+     else {b = "world";
+ }
+console.log(b);
+
+
+
 
 
 
