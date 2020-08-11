@@ -158,8 +158,30 @@ Therefore Strings values that are canonically equal according to the Unicode sta
 In effect this algorithm assumes that both Strings are already in normalised form.
 */
 
+/* Mot so nguyen tac
+neu mot trong hai ben phep so sanh co the la true hay false tranh dung == ma dung ===
+Neu mot trong hai ben phep so sanh la co the mot gia tri cu the (0, "", [], hoac array rong) tranh dung == ma dung ===
+Trong tat ca cac truong hop khac CODER yen tam dung ==. de don gian cho nhieu truong hop code
+*/
 
+// khong bang != di cap ==
+// khong bang tuyet doi !== di cap ===
 
+var a = [1,2,3];
+var b = [1,2,3];
+var c = "1,2,3";
+console.log(a == b);
+console.log(a == c);
+console.log(b == c);
+console.log(a === b);
+console.log(a === c);
+console.log(b === c);
+console.log(a != b);
+console.log(a != c);
+console.log(b != c);
+console.log(a !== b);
+console.log(a !== c);
+console.log(b !== c);
 
 
 
