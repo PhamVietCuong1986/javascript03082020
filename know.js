@@ -92,6 +92,29 @@ hay khog
 xac dinh danh sach cac gia tri dac trung coi la Falsy boi vi khi bij ep "boolean" 
 no se tro thanh False-- bao gom gia tri (0, "")
  bat ky gia tri nao khong co danh sach falsy no chuyen thanh Truthy-- bao gom (99.99, free )*/
+// DIEU KIEN SWITCH dung de thuc hien mot loat lenh dieu kien IF ELSE
+
+
+// VONG LAP 
+/*la lap lai mot tap hop hanh dong cho den khi co mot dieu kien nhat dinh that bai
+ noi cach khac chi lap lai neu dieu kien thoa man
+ mot vong lap bao gom dieu kien kiem tra cung nhu 1 block (block {}), 
+ moi lan block vong lap duoc thuc hien no duoc goi la su lap lai */
+ /* vong lap WHILE(){block lenh} va dang "DO{block lenh} ... WHILE() " 
+ minh hoa khai niem lap lai mot BLOCK cau lenh 
+ cho den khi dieu kien khong con duoc danh gia laf TRue */
+ var NumberOfCustomer = 9;
+ while(NumberOfCustomer > 0){
+     console.log("how may i help you")
+     NumberOfCustomer = NumberOfCustomer - 1;
+ }
+ do{
+     console.log("How may i help you");
+     NumberOfCustomer = NumberOfCustomer - 1;
+ } while(NumberOfCustomer > 0);
+
+
+
 
  
 
