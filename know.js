@@ -143,15 +143,31 @@ Chuong trinh can tach code thanh nhieu phan de su dung di su dung lai day goi la
 Mot ham Function la mot phan code duoc dat ten va co the duoc goi bang ten
 Code ben trong no se chay cho moi lan goi
 */
-function printAmount() {
-    console.log(amount.toFixed(2));
+// function printAmount() {
+//     console.log(amount.toFixed(2));
+    
+// }
+// var amount = 99.99;
+// printAmount();
+// amount = amount *2;
+// printAmount();
+// ham print thay the cho console.log()
+// vi du 2
+
+function printAmount(amt) {
+    console.log(amt.toFixed(2));
     
 }
+function formatAmount() {
+    return "$" + amount.toFixed(2);
+}
 var amount = 99.99;
-printAmount();
-amount = amount *2;
-printAmount();
-// ham print thay the cho console.log()
+printAmount(amount*2);
+amount = formatAmount();
+console.log(amount);
+
+
+
 
 
 
