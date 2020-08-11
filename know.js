@@ -1,3 +1,6 @@
+// HIEU VE LAP TRINH
+
+
 // var b = 5;
 // var a = b*2;
 // console.log(a);
@@ -247,29 +250,33 @@ Nhung bien a co the trung nhau ben trong cac SCOPE khac nhau
  số tiền chi trả bao nhiêu, số tiền còn lại bao nhiêu
  định dang ham tien chi tra và thue là $ trong 2 thap phan
  */
-const TAX_RATE = 0.08;
-const PHONE_PRICE = 99.99;
-const ACESSORY_PRICE = 9.99;
-const SPENDING_THRESHOLD = 200;
-var amount = 0;
-var bank_balance = 350;
-function CaculateTax(amt) {
-      return  amt * TAX_RATE;
-}
-function FormatAmount(at) {
-    return "$" + at.toFixed(2);
-}
-while(amount < bank_balance ){
-    amount = amount + PHONE_PRICE;
-    if(amount < SPENDING_THRESHOLD){
-        amount =amount + ACESSORY_PRICE;
-    }
-}
-amount = amount + CaculateTax(amount);
-console.log(" your purchase" + FormatAmount(amount));
-if (amount > bank_balance){
-    console.log("you can't afford your purchase" + ": ban khong tra noi");
-}
+
+ // bai tap hay
+
+ // const TAX_RATE = 0.08;
+// const PHONE_PRICE = 99.99;
+// const ACESSORY_PRICE = 9.99;
+// const SPENDING_THRESHOLD = 200;
+// var amount = 0;
+// var bank_balance = 350;
+// var c = bank_balance - amount;
+// function CaculateTax(amt) {
+//       return  amt * TAX_RATE;
+// }
+// function FormatAmount(amt) {
+//     return "$" + amt.toFixed(2);
+// }
+// while(amount < bank_balance ){
+//     amount = amount + PHONE_PRICE;
+//     if(amount < SPENDING_THRESHOLD){
+//         amount =amount + ACESSORY_PRICE;
+//     }
+// }
+// amount = amount + CaculateTax(amount);
+// console.log(" your purchase" + FormatAmount(amount));
+// if (amount > bank_balance){
+//     console.log("you can't afford your purchase" + ": ban khong tra noi");
+// }
 
 
 
