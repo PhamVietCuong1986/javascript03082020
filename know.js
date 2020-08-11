@@ -68,14 +68,30 @@ hay khog
 
  // DIEU KIEN IF. neu dieu kien nay dung hay lam theo {} cac lenh trong block
  // IF duoc thuc thi trong dau () de the hien nhu la true hoac False
- var bank_balance = 301.23;
- var amount = 99.99;
- if( amount > bank_balance) {
-     console.log(" i want to buy this phone");
- }
+ // ban cung co the thuc hien thay the mot so dieu kien neu khong thoa man, goi menh de ELSE
+//  var bank_balance = 301.23;
+//  var amount = 99.99;
+//  if( amount > bank_balance) {
+//      console.log(" i want to buy this phone");
+//  }
+// SU DUNG DIEU KIEN if() {} else {}
+//  var ACESSORY_PRICE = 9.99;
+//  var amount = 99.99;
+//  var bank_balance = 301.23;
+//  amount = amount * 2;
+//   if( amount < bank_balance) {
+//       amount = amount + ACESSORY_PRICE;
+//      console.log(" i want to buy this phone");
+//      console.log(amount);
+//  } 
+//  else{
+//      console.log(" NO, THANKS");
+//  }
 
-
-
+/* JS  vi du tren 
+xac dinh danh sach cac gia tri dac trung coi la Falsy boi vi khi bij ep "boolean" 
+no se tro thanh False-- bao gom gia tri (0, "")
+ bat ky gia tri nao khong co danh sach falsy no chuyen thanh Truthy-- bao gom (99.99, free )*/
 
  
 
