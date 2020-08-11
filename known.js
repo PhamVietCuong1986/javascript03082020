@@ -257,14 +257,47 @@ Cho phep khai bao bien cho tung BLOCK rieng biet {}
  
 // var a = 40;
 // var b = (a > 41) ? "hello" : "world";
-// tuong tu voi doan lenh sau
-var a = 42;
- if (a > 41){
-     b = "hello";}
-     else {b = "world";
- }
-console.log(b);
+// // tuong tu voi doan lenh sau
+// var a = 42;
+//  if (a > 41){
+//      b = "hello";}
+//      else {b = "world";
+//  }
+// console.log(b);
 
+// STRICT (Che do nghiem ngat)
+/* code an toan hown, toi uu hon
+*/
+
+// Ham theo gia tri
+
+// function foo(){
+
+    //
+// }
+//  // co ban foo la 1 bien trong pham vi bao quanh ben ngoai duoc tham chieu voi function
+ 
+//  var foo = function(){
+//      // bieu thuc ham an danh khong co ten function()
+//  };
+//  var x = function(bar){
+//      // bieu thuc ham dat ten
+//  };
+// hai ham tren muon thuc hien can them dong lenh foo(); vaf x();
+ // immediatelly invoked function expressions (IIFEs) Ham bieu thuc thuc hien ngay lap tuc
+
+ (function IIFEs(){
+     console.log("hello");
+
+ })();// chay duoc ket qua luon
+ // IIFEs theo cach nay de khai bao bien khong anh huong den CODE ben ngoai IIFEs
+ // vidu
+  var a = 42;
+  (function IIFEs(){
+      var a = 10;
+      console.log(a);//10
+  })();
+  console.log(a);//42
 
 
 
