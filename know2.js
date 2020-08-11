@@ -292,12 +292,31 @@ Cho phep khai bao bien cho tung BLOCK rieng biet {}
 //  })();// chay duoc ket qua luon
 //  // IIFEs theo cach nay de khai bao bien khong anh huong den CODE ben ngoai IIFEs
 //  // vidu
-  var a = 42;
-  (function IIFEs(){
-      var a = 10;
-      console.log(a);//10
-  })();
-  console.log(a);//42
+//   var a = 42;
+//   (function IIFEs(){
+//       var a = 10;
+//       console.log(a);//10
+//   })();
+//   console.log(a);//42
+
+
+// CLOSURE "DONG KIN" Khai niem quan trong nhat trong JS
+// MOI TUONG QUAN 
+// ham add() duoc tra voi moi lan goi ham makeAdder() tren no la ghi nho gia tri x duoc truyen vao ham makeAdder()
+
+Function makeAdder(x){
+    function add(y){
+        return y + x;
+        };
+        return add;
+}
+
+var plusOne = makeAdder(1);//x=1
+var plusTen = makeAdder(10);//x=10
+plusOne(3);//y=3,x=1, add = 3+1
+plusOne(10)
+plusTen(13);
+plusTen(15);
 
 
 
