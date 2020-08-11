@@ -1,4 +1,4 @@
-// HIEU VE JAVASCRIPT UP&GOING
+// HIEU VE JAVASCRIPT
 
 //1. GIA TRI VA KIEU
 /* 
@@ -167,21 +167,53 @@ Trong tat ca cac truong hop khac CODER yen tam dung ==. de don gian cho nhieu tr
 // khong bang != di cap ==
 // khong bang tuyet doi !== di cap ===
 
-var a = [1,2,3];
-var b = [1,2,3];
-var c = "1,2,3";
-console.log(a == b);
-console.log(a == c);
-console.log(b == c);
-console.log(a === b);
-console.log(a === c);
-console.log(b === c);
-console.log(a != b);
-console.log(a != c);
-console.log(b != c);
-console.log(a !== b);
-console.log(a !== c);
-console.log(b !== c);
+// var a = [1,2,3];
+// var b = [1,2,3];
+// var c = "1,2,3";
+// console.log(a == b);
+// console.log(a == c);
+// console.log(b == c);
+// console.log(a === b);
+// console.log(a === c);
+// console.log(b === c);
+// console.log(a != b);
+// console.log(a != c);
+// console.log(b != c);
+// console.log(a !== b);
+// console.log(a !== c);
+// console.log(b !== c);
+
+// BAT BINH DANG
+/* cac toan tu <,> >=, <=
+duoc su dung so sanh number
+cung duoc dung de so sanh String su dung nguyen tac alphabe ("bar" < "foo")
+*/
+
+
+// BIEN VARIABLE TRONG JS
+
+// FUNCTION SCOPE PHAM VI HAM
+/* 1.HOISTING
+Khong nen su dung
+2. Scope long nhau
+khi ban khai bao 1 bien no co hieu luc trong pham vi do ke ca pham vi con
+ */
+function foo() {
+    var a = 1;
+    function bar(){
+        var b  = 3;
+        function baz(){
+            var c = 5;
+            console.log(a,b,c);
+        }
+        baz();// chu y cau truc function
+        console.log(a,b);
+    }
+    bar();// chu y cau truc function
+   console.log(a);
+}
+foo();// chu y cau truc function
+
 
 
 
