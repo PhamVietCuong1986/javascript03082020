@@ -167,13 +167,12 @@ Code ben trong no se chay cho moi lan goi
 // console.log(amount);
 
 // vi du 2
-// bieu thuc cua tham so khi chua khai bao bien
 // khi co bien thi bien tu dong thay the cho tham so
 // tham so chi gia tri minh hoa cong thuc bieu thi cho ham function
 //gia tri cuoi cung cua function
 const TAX_RATE = 0.08;
 function caculaterFinalPurchaseAmount(amty) {
-    amty = amty + (amty * TAX_RATE );
+    amty = amty + (amty * TAX_RATE );// bieu thuc cua tham so tuong trung cho bien
     return amty; 
 }
 var amount = 99.99;
@@ -182,7 +181,22 @@ console.log(amount.toFixed(2));
 // tham so amt chang qua tham so de hien dien cho cach thuc tinh bieu thuc tham so hinh thuc
 // tham so khong can khai bao
 // khi khai bao bien thi bien the vao vi tri tham so de tinh gia tri bieu thuc
+// Tham Số Và Đối Số Của Hàm
+// Ở những bài trước, bạn đã biết rằng hàm có thể có nhiều tham số :
 
+// tênhàm (thamsố1, thamsố2, thamsố3) {
+//     lệnh được thực thi
+// }
+// Tham số của hàm là những cái tên được liệt kê trong phần định nghĩa hàm
+
+// Đối số của hàm là những giá trị thực được truyền vào khi gọi hàm
+
+// Quy Tắc Của Tham Số
+// Định nghĩa hàm trong JavaScript không xác định kiểu dữ liệu của tham số.
+// Hàm trong JavaScript không thực hiện kiểm tra kiểu của các đối số truyền vào.
+// Hàm trong JavaScript không kiểm tra số lượng đối số nhận được.
+// Tham Số Mặc Định (Default Parameter)
+// Nếu một hàm được gọi mà không có đối số (ít hơn phần đã khai báo) thì những giá trị bỏ trống đó được đặt là undefined
 
 
 
