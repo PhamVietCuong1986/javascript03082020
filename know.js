@@ -220,7 +220,30 @@ function two() {
 }
 one;
 two;
+// 1 Scope co the long trong nhieu scope khac
+// Code ben trong scope sau nhat co the tiep can moi bien o cac pham vi
 
+function outer() {
+    var a = 1;
+    function inner() {
+        var b = 2;
+        console.log(a + b);// 3
+        
+    }
+    inner();
+    console.log(a);// 1 bien b khong anh huong den pham vi nay
+}
+outer;
+ // bai tap
+ /* ban co tai khoan 303.21 $
+ bạn đặt ngưỡng chi tiêu mình là 200$
+ bạn cân mua điện thoại giá 99.99$
+ giá phụ kiện 9.99 $
+ Thuế chính phủ 0.08
+ bạn cần tính xem mình có thể mua bao nhiêu điện thoại
+ bao nhiêu phụ kiện
+ số tiền chi trả bao nhiêu, số tiền còn lại bao nhiêu
+ */
 
 
 
