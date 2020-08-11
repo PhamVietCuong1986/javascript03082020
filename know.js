@@ -127,8 +127,33 @@ no se tro thanh False-- bao gom gia tri (0, "")
 //      i = i+1;
 //  }
 // thay the ca doan lenh tren for
-for (var i = 0; i <= 9; i = i+1)
-console.log(i);
+
+// VONG LAP FOR()
+/* vong lap FOR co 3 menh de
+menh de 1: menh de khoi tao (var i = 0)
+menh de 2: menh de kiem tra dieu kien (i<=9)
+menh de 3: menh de vong lap,menh de cap nhat i=i+1
+*/
+
+// for (var i = 0; i <= 9; i = i+1)
+// console.log(i);
+
+/* HAM FUNCTION
+Chuong trinh can tach code thanh nhieu phan de su dung di su dung lai day goi la Function
+Mot ham Function la mot phan code duoc dat ten va co the duoc goi bang ten
+Code ben trong no se chay cho moi lan goi
+*/
+function printAmount() {
+    console.log(amount.toFixed(2));
+    
+}
+var amount = 99.99;
+printAmount();
+amount = amount *2;
+printAmount();
+// ham print thay the cho console.log()
+
+
 
 
 
