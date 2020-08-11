@@ -103,15 +103,33 @@ no se tro thanh False-- bao gom gia tri (0, "")
  /* vong lap WHILE(){block lenh} va dang "DO{block lenh} ... WHILE() " 
  minh hoa khai niem lap lai mot BLOCK cau lenh 
  cho den khi dieu kien khong con duoc danh gia laf TRue */
- var NumberOfCustomer = 9;
- while(NumberOfCustomer > 0){
-     console.log("how may i help you")
-     NumberOfCustomer = NumberOfCustomer - 1;
- }
- do{
-     console.log("How may i help you");
-     NumberOfCustomer = NumberOfCustomer - 1;
- } while(NumberOfCustomer > 0);
+//  var NumberOfCustomer = 9;
+//  while(NumberOfCustomer > 0){
+//      console.log("how may i help you")
+//      NumberOfCustomer = NumberOfCustomer - 1;
+//  }
+//  do{
+//      console.log("How may i help you");
+//      NumberOfCustomer = NumberOfCustomer - 1;
+//  } while(NumberOfCustomer > 0);
+ /* neu dieu kien kiem tra la false thi lan lap ke tiep se khong chay
+ co nghia dieu kien khoi tao false thi vong lap WHILE se khong chay,
+ va vong lap DO .. WHILE se chay lan dau
+ Dieu kien kiem tra cho moi vong lap giong nhu co lenh IF ben trong vog lap */
+ /* Dung lenh BREAK se dung vong lap
+ Dung bien lap i de lam vong lap cho nhom dem so */
+//  var i = 0;
+//  while(true){
+//      if((i<=9) === false){
+//          break;
+//      }
+//      console.log(i);
+//      i = i+1;
+//  }
+// thay the ca doan lenh tren for
+for (var i = 0; i <= 9; i = i+1)
+console.log(i);
+
 
 
 
