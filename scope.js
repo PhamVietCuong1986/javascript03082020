@@ -69,14 +69,27 @@ Moi function khai bao tao ra"Bong bong"
 
 // Tranh duoc su trung lap
 
-function foo(){
-    function bar(a){
-        i = 3;
-        for console.log(a + i);
+// function foo(){
+//     function bar(a){
+//         i = 3;
+//         for console.log(a + i);
+//     }
+//     for (var i = 0; i < 10; i++){
+//          bar(i * 2);
+//     }
+// }
+// foo();
+
+// NAMESPACES - TOAN CUC
+
+var MyRealyCoolLibrary = {
+    awesome : "stuff",
+    doSomething : function () {
+        // 
+    },
+    doAnotherThing : function () {
+        //
     }
-    for (var i = 0; i < 10; i++){
-         bar(i * 2);
-    }
-}
-foo();
+};
+
 
