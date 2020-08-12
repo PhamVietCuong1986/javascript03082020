@@ -374,7 +374,7 @@ THIS do khong tham chieu len ben than ham cua no. Day chinh dieu hay bi hieu lam
 // var bar = Object.create(foo);
 // bar.b = "hello world";
 // console.log(bar.b);
-// console.log(bar.a);// bar khong co thuoc tinh a, nhung no tim ben trong foo co thuoc tinh a
+// console.log(bar.a);// bar khong co thuoc tinh a, nhung no tim ben trong foo co thuoc tinh a, Su ke thua
 
 // CU VA MOI
 
