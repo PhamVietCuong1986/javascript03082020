@@ -242,18 +242,32 @@ Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
 
 // LEXICAL SCOPE la khong gian bien duoc khia bao trong function()
  
-function wait(message){
-  setTimeout( function timer (){ // ham function timer la 1 closure
-    console.log(message), 1000
-  });
-}
-wait (" hello, closure");
+// function wait(message){
+//   setTimeout( function timer (){ // ham function timer la 1 closure
+//     console.log(message), 1000
+//   });
+// }
+// wait (" hello, closure");
 
 
+// function setupBot (name, selector){
+//   $(selector) .click (function activator(){
+//     console.log("activating" + name);
 
+//   });
+// }
+// setupBot("closure Bot1" , "#bot_1")//gan cho doi so gia tri name ="closure Bot1" , selector = "bot_1"
+// setupBot("closure Bot2" , "#bot_2")//gan cho doi so gia tri name ="closure Bot2" , selector = "bot_2"
 
+//IIFE co moi lien he mat thiet voi CLOSURE nhung khong phai la 1 CLOSURE
 
+// VONG LAP + CLOSURE
 
+for(var i = 1; i <= 5, i++) {
+  setTimeout(function timer(){
+      console.log(i); 
+    },i * 1000);
+  }
 
 
 
