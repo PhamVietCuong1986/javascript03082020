@@ -195,7 +195,7 @@ cung duoc dung de so sanh String su dung nguyen tac alphabe ("bar" < "foo")
 // FUNCTION SCOPE PHAM VI HAM
 /* 1.HOISTING
 Khong nen su dung
-2. Scope long nhau
+2. Scope long nhau thuong duoc hien thi duoi dang ham block {}
 khi ban khai bao 1 bien no co hieu luc trong pham vi do ke ca pham vi con
 //  */
 // function foo() {
@@ -308,7 +308,7 @@ Cho phep khai bao bien cho tung BLOCK rieng biet {}
 //     function add(y){
 //         return y + x;
 //         };
-//         return add;
+//         return add;//de dong kin add
 // }
 
 // var plusOne = makeAdder(1);//x=1
@@ -323,23 +323,62 @@ Cho phep khai bao bien cho tung BLOCK rieng biet {}
 // Modules cho phep ban xac dinh cac chi tiet (bien, ham) thuc hien khep kin CLOSURE theo ca the an khoi cac yeu to ben ngoai
 // khong giong voi API
 
-// VI DU MAU MODULE
- Function User(){
-     var username , password;
-     function doLogin(user,pw){
-         username = user;
-         password = pw;
-         var publicAPI = {
-             login : doLogin
-         }; 
-         return publicAPI;
+// // VI DU MAU MODULE
+//  Function User(){
+//      var username , password;// Bien duoc khai bao ben trong ham function
+//      function doLogin(user,pw){ // ham dong CLOSURE doLogin
+//          username = user;
+//          password = pw;
+//          var publicAPI = {
+//              login : doLogin
+//          }; 
+//          return publicAPI;
          
-        }
- }
- // Tao mot Module User
+//         }
+//  }
+//  // Tao mot Module User
 
-var fred = User();
-fred.login("fred" , "12Baterry34!");
+// var fred = User();
+// fred.login("fred" , "12Baterry34!");
+// ham User() thuc hien vai tro la Scope ngoai cung chua bien username va password
+//Trong do ham doLogin() ben trong voi cac noi dung MODULE User deu la cuc bo vaf khong the tiep can ben ngoai
+
+// XAC DINH THIS
+/*Moi nguoi thuong nghi THIS lien quan den "Mau doi tuong - Prototype", Nhung trong JS THIS huong toi 1 co che khac
+neu 1 ham co THIS ben trong no, su quy chieu cua THIS nay thuong chi den 1 OBJECT. Nhung object nao tuy ham no goi la gi
+THIS do khong tham chieu len ben than ham cua no. Day chinh dieu hay bi hieu lam 
+*/
+//  function foo(){
+//      console.log(this.bar);
+//      }
+//      var bar = "global";
+//      var obj1 = {
+//          bar : "obj1" ,
+//          foo : foo
+//      };
+//      var obj2 = {
+//          bar : "obj2"
+
+//      };
+//      foo(); // "global"
+//      obj1.foo();// "obj1"
+//      foo.call(obj2); //"obj2"
+//      new foo(); // undefined
+ 
+
+// PROTOTYPE NGUYEN MAU
+
+// var foo = {
+//     a : 42
+// }
+// var bar = Object.create(foo);
+// bar.b = "hello world";
+// console.log(bar.b);
+// console.log(bar.a);// bar khong co thuoc tinh a, nhung no tim ben trong foo co thuoc tinh a
+
+// CU VA MOI
+
+
 
 
 
