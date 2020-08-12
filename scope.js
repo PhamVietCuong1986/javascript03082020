@@ -82,14 +82,35 @@ Moi function khai bao tao ra"Bong bong"
 
 // NAMESPACES - TOAN CUC
 
-var MyRealyCoolLibrary = {
-    awesome : "stuff",
-    doSomething : function () {
-        // 
-    },
-    doAnotherThing : function () {
-        //
-    }
-};
+// var MyRealyCoolLibrary = {
+//     awesome : "stuff",
+//     doSomething : function () {
+//         // 
+//     },
+//     doAnotherThing : function () {
+//         //
+//     }
+// };
+
+// QUAN LY MODULE
+// Ham dong vai tro pham vi
+ 
+// var a = 2;
+// function foo() {
+//     var a = 3;
+//     console.log(a);//3
+// }
+// foo();
+// console.log(a);//2
+
+// khai bao ham foo() an voi chuong trinh
+ var a = 2;
+ (function foo() {
+     var a = 3;
+     console.log(a);
+  })();// cau truc nay an ham foo khong co y nghia doi chuong trinh ben ngoai
+console.log(a)
+
+
 
 
