@@ -127,13 +127,35 @@ Moi function khai bao tao ra"Bong bong"
     
 // }, 1000);
 
-// INVOKING FUNCTION EXPRESSION IMMEDIATELLY (IIFE)
+//  IMMEDIATELY INVOKED FUNCTION EXPRESSION  (IIFE)
 // Goi bieu thuc ham tuc thi
+// Dang thong thuong IIFE duoc su dung ham vo danh
+// (function(){
+//     var a = 2;
+//     console.log(a);
+// })();
+// Bien tau khac cua IIFE
+ 
+// var a = 2;
+// (function IIFE(global){
+//     var a = 3;
+//     console.log(a);//3
+//     console.log(global.a);//2
+// })(window);
+// console.log(a);//2
+// // tham so "global", tham chieu "window"
 
-(function(){
-    var a = 2;
-    console.log(a);
+// IIFE giai quyet hieu ung phu undefined
+
+undefined = true;
+(function IIFE(undefined){
+    var a ;
+    if (a === undefined){
+        console.log("undefined an toan o day");
+    }
 })();
+
+
 
 
 
