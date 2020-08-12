@@ -165,13 +165,34 @@ Moi function khai bao tao ra"Bong bong"
 
 // LET su dung khai bao bien trong BLOCK SCOPE {} thay chho var
 
-var foo = true;
-if (foo){
-    let bar = foo * 2;
-    bar = something(bar);
-    console.log(bar);//
+// var foo = true;
+// if (foo){
+//     let bar = foo * 2;
+//     bar = something(bar);
+//     console.log(bar);//
+// }
+// console.log(bar); // referenc Error
+
+// Khai bao Let chi co tac dung khi khai bao LET duoc thuc hien, khong phu toan cuc trong Block {}
+
+var a = 2;
+{
+    console.log(bar);// reference Error
+    let bar = 2;// cac bieu thuc chua bien sau khi khai bao LET oi dc hieu, truoc do bao loi
+    
 }
-console.log(bar); // referenc Error
+// GOM RAC VA CLOSURE
+// gom rac va dong kin de lay lai bo nho
+
+function process (data){
+    // lam gi do
+}
+var someRellyBigData = { };
+process(someRellyBigData);
+var btn = document.getElementById("my button");// thay "let" cho "var" khai bao bien cho khoi rieng biet
+btn.addEventListener("click" , function click(evt){
+    console.log("button clicked");
+}, false);
 
 
 
