@@ -37,3 +37,34 @@ tap hop cac quy tac nghiem ngat ve cach thuc truy cap cac ma vua thuc thi
 /* CHAPTER 3 _ SERIES 2: FUNCTION & BLOCK SCOPE
 
 
+SCOPE tap hop bao gom cac "BONG BONG" ma moi scope hoat dong nhu vat chua trong do de xac dinh (ham, bien) 
+Cac "BONG BONG" to hop (NESTING) gon gang ben trong cac "bong bong khac", to hop nay dc xac dinh tai thoi diem AUthor runtime*/
+
+/*3.1 Pham vi cac ham
+FUNCTION -BASED SCOPE
+Moi function khai bao tao ra"Bong bong"
+*/
+
+// function doSomething (a){
+//     b = a + doSomethingElse(a*2);
+//     console.log(b * 3);
+// }
+// function doSomethingElse (a){
+//     return a-1;
+//  }
+//  var b;
+//  doSomething(2); //15
+
+ // lap trinh toi uu hon
+ function doSomething (a){
+    function doSomethingElse(a){
+   
+    return a-1;
+    }
+    var b;
+    b = a + doSomethingElse(a*2);
+    console.log(b * 3);
+ }
+ 
+ doSomething(2); //15
+
