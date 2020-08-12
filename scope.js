@@ -104,12 +104,21 @@ Moi function khai bao tao ra"Bong bong"
 // console.log(a);//2
 
 // khai bao ham foo() an voi chuong trinh
- var a = 2;
- (function foo() {
-     var a = 3;
-     console.log(a);
-  })();// cau truc nay an ham foo khong co y nghia doi chuong trinh ben ngoai
-console.log(a)
+//  var a = 2;
+//  (function foo() {
+//      var a = 3;
+//      console.log(a);
+//   })();// cau truc nay an ham foo khong co y nghia doi chuong trinh ben ngoai
+// console.log(a)
+
+// VO DANH VA CAI TEN
+// bieu thuc ham la tham chieu CALLBACK
+ setTimeout(function() {
+     console.log("I waited 1 second");
+     
+ }, 1000);
+ 
+
 
 
 
