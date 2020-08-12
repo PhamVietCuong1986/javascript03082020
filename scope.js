@@ -175,24 +175,46 @@ Moi function khai bao tao ra"Bong bong"
 
 // Khai bao Let chi co tac dung khi khai bao LET duoc thuc hien, khong phu toan cuc trong Block {}
 
-var a = 2;
-{
-    console.log(bar);// reference Error
-    let bar = 2;// cac bieu thuc chua bien sau khi khai bao LET oi dc hieu, truoc do bao loi
+// var a = 2;
+// {
+//     console.log(bar);// reference Error
+//     let bar = 2;// cac bieu thuc chua bien sau khi khai bao LET oi dc hieu, truoc do bao loi
     
-}
+// }
 // GOM RAC VA CLOSURE
 // gom rac va dong kin de lay lai bo nho
 
-function process (data){
-    // lam gi do
-}
-var someRellyBigData = { };
-process(someRellyBigData);
-var btn = document.getElementById("my button");// thay "let" cho "var" khai bao bien cho khoi rieng biet
-btn.addEventListener("click" , function click(evt){
-    console.log("button clicked");
-}, false);
+// function process (data){
+//     // lam gi do
+// }
+// var someRellyBigData = { };
+// process(someRellyBigData);
+// var btn = document.getElementById("my button");// thay "let" cho "var" khai bao bien cho khoi rieng biet
+// btn.addEventListener("click" , function click(evt){
+//     console.log("button clicked");
+// }, false);
+
+// Vong lap Let
+//  for(let i = 0; i < 10; i++){
+//      console.log(i);
+//  }
+// console.log(i);// reference Error
+
+// CONST - KHAI BAO BIEN HANG SO 
+
+
+// CHAPTER IV -SERIES 2 - HOISTING// trung co truoc ga
+/* hOISTING la viec khai bao bien voi "var" duoc thuc hien tren cung cua ham thuc thi bien do"*/
+var a;
+a  = 2;
+console.log(a);
+// hoac la
+var a;
+console.log(a);
+a  = 2;
+// hoac la
+var a = 2;
+console.log(a);
 
 
 
