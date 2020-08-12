@@ -113,11 +113,30 @@ Moi function khai bao tao ra"Bong bong"
 
 // VO DANH VA CAI TEN
 // bieu thuc ham la tham chieu CALLBACK
- setTimeout(function() {
-     console.log("I waited 1 second");
+//  setTimeout(function() {// ham khong ten hay an danh
+//      console.log("I waited 1 second");
      
- }, 1000);
- 
+//  }, 1000);
+
+//  /* Ham vo danh khong co ten truy dau, kho Debug loi
+//  lam code kho doc hon. Mot cai ten chinh la document cua code */
+
+//  // ham co ten "SetoutHander"
+//  setTimeout(function setimeoutHander() {// ham khong ten hay an danh
+//     console.log("I waited 1 second");
+    
+// }, 1000);
+
+// INVOKING FUNCTION EXPRESSION IMMEDIATELLY (IIFE)
+// Goi bieu thuc ham tuc thi
+
+(function(){
+    var a = 2;
+    console.log(a);
+})();
+
+
+
 
 
 
