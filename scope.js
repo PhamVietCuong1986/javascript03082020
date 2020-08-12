@@ -56,15 +56,27 @@ Moi function khai bao tao ra"Bong bong"
 //  doSomething(2); //15
 
  // lap trinh toi uu hon
- function doSomething (a){
-    function doSomethingElse(a){
+//  function doSomething (a){
+//     function doSomethingElse(a){
    
-    return a-1;
+//     return a-1;
+//     }
+//     var b;
+//     b = a + doSomethingElse(a*2);// khong tiep can ben ngoai chuong trinh
+//     console.log(b * 3);
+//  }
+//   doSomething(2); //15
+
+// Tranh duoc su trung lap
+
+function foo(){
+    function bar(a){
+        i = 3;
+        for console.log(a + i);
     }
-    var b;
-    b = a + doSomethingElse(a*2);
-    console.log(b * 3);
- }
- 
- doSomething(2); //15
+    for (var i = 0; i < 10; i++){
+         bar(i * 2);
+    }
+}
+foo();
 
