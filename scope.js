@@ -147,13 +147,32 @@ Moi function khai bao tao ra"Bong bong"
 
 // IIFE giai quyet hieu ung phu undefined
 
-undefined = true;
-(function IIFE(undefined){
-    var a ;
-    if (a === undefined){
-        console.log("undefined an toan o day");
-    }
-})();
+// undefined = true;
+// (function IIFE(undefined){
+//     var a ;
+//     if (a === undefined){
+//         console.log("undefined an toan o day");
+//     }
+// })();
+
+// Bien the khac cua IIFE trong du an UDM (universal definition Module)
+
+// BLOCK SCOPE
+
+// for (var i = 0; i < 10; i++){// khai bao tai noi su dung no cang cuc bo cang tot. noi dung cua BLOCK SCOPE
+//     console.log(i);
+// };
+
+// LET su dung khai bao bien trong BLOCK SCOPE {} thay chho var
+
+var foo = true;
+if (foo){
+    let bar = foo * 2;
+    bar = something(bar);
+    console.log(bar);//
+}
+console.log(bar); // referenc Error
+
 
 
 
