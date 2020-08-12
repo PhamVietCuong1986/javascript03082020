@@ -204,17 +204,51 @@ Moi function khai bao tao ra"Bong bong"
 
 
 // CHAPTER IV -SERIES 2 - HOISTING// trung co truoc ga
-/* hOISTING la viec khai bao bien voi "var" duoc thuc hien tren cung cua ham thuc thi bien do"*/
-var a;
-a  = 2;
-console.log(a);
-// hoac la
-var a;
-console.log(a);
-a  = 2;
-// hoac la
-var a = 2;
-console.log(a);
+/* hOISTING la viec khai bao bien voi "var" duoc thuc hien tren cung cua bieu thuc thuc thi bien do"
+Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
+*/
+// var a;
+// a  = 2;
+// console.log(a);
+// // hoac la
+// var a;
+// console.log(a);
+// a  = 2;
+// // hoac la
+// var a = 2;
+// console.log(a);
+
+// khai bao ham theo chuan HOISTING
+// Function foo(){
+//     var a = 2;
+//     console.log(a);
+// }
+// foo();
+
+// HAM TRUOC
+
+// function foo(){
+//     console.log(1);
+// }
+// foo();
+// foo = function(){
+//     console.log(2);
+// };
+// var a = 2; day la 2 cau lenh cau lenh dau la bien dich var a; cau lenh hai thuc thi gan a = 2;
+
+
+// CHAPTER 5 -SERIES 2 - SCOPE CLOSURE (BLOCK DONG KIN)
+
+
+// LEXICAL SCOPE la khong gian bien duoc khia bao trong function()
+ 
+function wait(message){
+  setTimeout( function timer (){ // ham function timer la 1 closure
+    console.log(message), 1000
+  });
+}
+wait (" hello, closure");
+
 
 
 
