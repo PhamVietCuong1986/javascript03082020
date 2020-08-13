@@ -263,14 +263,42 @@ Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
 
 // VONG LAP + CLOSURE
 
-for(var i = 1; i <= 5, i++) {
-  setTimeout(function timer(){
-      console.log(i); 
-    },i * 1000);
-  }
+// for (var i = 1; i <= 5, i++) {
+//   setTimeout(function timer(){
+//       console.log(i); 
+//     },i * 1000);
+//   }
+
+// Linter la cong cu tim loi trong viet CODE dua ra huong dan trong qua trinh viet CODE
+// Linter la cong cu dung de phan tich SOURCE CODE phat hien nhung loi sai, bug, vi pham loi sai khi viet CODE
 
 
+// su dung IIFE
+
+// for (var i = 1; i<=5; i++){
+//   (function() {setTimeout( function timer(){
+//     console.log(i);
+//   }, i * 1000);
+
+//   })();
+// }// se chay nhung ket qua 6, khong chinh xac
 
 
+// for (var i = 1; i<=5; i++){
+//   (function() {
+//     var j = i;
+//     setTimeout( function timer(){
+//     console.log(j);
+//   }, j * 1000);
 
+//   })();
+// }
+//hay viet theo kieu dang duoi day
+for (var i = 1 ; i <=5;i++){
+  (function(j){var j = i;
+    setTimeout(function timer(){
+      console.log(j);
+    }, j*1000)// closure dong kin bien j cua ham timer
+  })(i);
+}
 
