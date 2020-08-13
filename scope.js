@@ -391,13 +391,37 @@ Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
 
 // truyen tham so vao
 
-function coolModule(id){
-  function Identifier(){
-    console.log(id + " i love JS");
+// function coolModule(id){
+//   function Identifier(){
+//     console.log(id + " i love JS");
+//   }
+//   return { Identifier: Identifier};
+// }
+// var foo1 =coolModule("foo 1");//gan gia tri cho tham so Id = "foo 1"
+// var foo2 =coolModule("foo 2");//gan gia tri cho tham so Id = "foo 2"
+// foo1.Identifier();//"foo 1 ILOVE jS"
+// foo2.Identifier();// "foo 2 I LOVE jS"
+
+// Mot bien the cua mau Module (module pattern) la dat ten OBJECT vaf ban tra lai nhu mot API cong khai
+
+var foo = (function coolModule(id){
+  function change(){ // sua doi cong khai API
+    publicAPI.identify = identify2;
   }
-  return { Identifier: Identifier};
-}
-var foo1 =coolModule("foo 1");//gan gia tri cho tham so Id = "foo 1"
-var foo2 =coolModule("foo 2");//gan gia tri cho tham so Id = "foo 2"
-foo1.Identifier();//"foo 1 ILOVE jS"
-foo2.Identifier();// "foo 2 I LOVE jS"
+  function identify1(){
+    console.log(id);
+  }
+  function identify2(){
+    console.log(id.toUpperCase());
+  }
+  var publicAPI = {
+    change: change,
+    identify: identify1
+  };
+  return publicAPI;
+})(" i know ");// gan gia tri cho tham so id = " i know "
+foo.identify();// " i know"
+foo.change();
+foo.identify();// I KNOW
+foo.identify();
+foo.identify();
