@@ -148,9 +148,9 @@ function inSoTheoDieuKien(callback){// dong vai tro ham B
     }
 }
 
-inSoTheoDieuKien(function(i){// function vo danh vi khong co ten chi co tham so i, chi su dung tuc thoi khong tai su dung
-if(i % 3 ===1) return true
-    return false
+inSoTheoDieuKien(function(ix){// function vo danh vi khong co ten chi co tham so i, chi su dung tuc thoi khong tai su dung
+if(ix % 2 ===1){ return true}
+   else{ return false}
 });
 
      
