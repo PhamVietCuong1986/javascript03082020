@@ -30,46 +30,55 @@ function nhan2(number){
 // viet funtion inSoChia3Du1
 // viet funtion inSoChinhPhuong
 
-function data(){
-    for(var i =1; i<=100; i++){
-    console.log(i);}
-}
-data();
+// function data(){
+//     for(var i =1; i<=100; i++){
+//     console.log(i);}
+// }
+// data();
 
-function inSoChan(){
+// function inSoChan(){
+//     for(var i =1; i<=100; i++){
+//         if(i % 2 ===0){
+//             console.log(i);
+//         }
+//     }
+// }
+//  inSoChan();
+
+//  function inSoLe(){
+//     for(var i =1; i<=100; i++){
+//         if(i % 2 ===1){
+//             console.log(i);
+//         }
+//     }
+// }
+//  inSoLe();
+
+
+//  function inSoChia3Du1(){
+//     for(var i =1; i<=100; i++){
+//         if(i % 3 ===1){
+//             console.log(i);
+//         }
+//     }
+// }
+//  inSoChia3Du1();
+
+//  function inSoChinhPhuong(){
+//     for(var i =1; i<=100; i++){
+//         if(Math.sqrt(i) % 1 ===0){
+//             console.log(i);
+//         }
+//     }
+// }
+//  inSoChinhPhuong();
+
+// viet duoi dang CALLBACK tham so: sodu
+ function inSo(sodu){
     for(var i =1; i<=100; i++){
-        if(i % 2 ===0){
+        if(i % 2 ===sodu){
             console.log(i);
         }
     }
 }
- inSoChan();
-
- function inSoLe(){
-    for(var i =1; i<=100; i++){
-        if(i % 2 ===1){
-            console.log(i);
-        }
-    }
-}
- inSoLe();
-
-
- function inSoChia3Du1(){
-    for(var i =1; i<=100; i++){
-        if(i % 3 ===1){
-            console.log(i);
-        }
-    }
-}
- inSoChia3Du1();
-
- function inSoChinhPhuong(){
-    for(var i =1; i<=100; i++){
-        if(Math.sqrt(i) % 1 ===0){
-            console.log(i);
-        }
-    }
-}
- inSoChinhPhuong();
- 
+ inSo(1);// gan gia tri cho tham so: sodu=0, tuc in so chan, sodu=1 so le
