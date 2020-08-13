@@ -2,9 +2,9 @@
 /*callback tức là ta truyền một đoạn code (Hàm A) này vào một đoạn code khác (Hàm B). 
 Tới một thời điểm nào đó, Hàm A sẽ được hàm B gọi lại (callback)*/
 // phuong thuc hay con goi la ham
-function nhan2(number){
-    return number * 2;
-}
+// function nhan2(number){
+//     return number * 2;
+// }
 // function xulymang(array){
 //     for(i = 0; i < array.length; i++){
 //         array[i] = array[i] * 2;
@@ -74,11 +74,53 @@ function nhan2(number){
 //  inSoChinhPhuong();
 
 // viet duoi dang CALLBACK tham so: sodu
- function inSo(sodu){
+//  function inSo(sodu ,sochia){
+//     for(var i =1; i<=100; i++){
+//         if(i % sochia ===sodu){
+//             console.log(i);
+//         }
+//     }
+// }
+//  inSo(1,3);// gan gia tri cho tham so: sodu=0, tuc in so chan, sodu=1 so le
+
+ // VIET DANG CALLBACK 2 HAM RIENG LE DANG CALLBACK
+
+ /*callback tức là ta truyền một đoạn code (Hàm A) này vào một đoạn code khác (Hàm B). 
+Tới một thời điểm nào đó, Hàm A sẽ được hàm B gọi lại (callback)*/
+
+ function inSoTheoDieuKien(callback){// dong vai tro ham B
     for(var i =1; i<=100; i++){
-        if(i % 2 ===sodu){
-            console.log(i);
+        const dk = callback(i);
+        if(dk){
+            console.log(i);// neu dieu kien dung thuc hien in ra man hinh i, neu False khong thuc hien
         }
     }
 }
- inSo(1);// gan gia tri cho tham so: sodu=0, tuc in so chan, sodu=1 so le
+
+     function inSoChinhPhuong(jx){// jx cung la tham so no giong tham so // Dong vai tro ham A
+        if(Math.sqrt(jx) % 1 ===0){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+    function inSoChan(y){// jx cung la tham so no giong tham so // Dong vai tro ham A
+        if(y % 2 ===0){
+            return true;
+        } else{
+            return false;
+        }
+    }
+    function inSoLe(y){// jx cung la tham so no giong tham so // Dong vai tro ham A
+        if(y % 2 ===1){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+inSoTheoDieuKien(inSoChinhPhuong);
+inSoTheoDieuKien(inSoChan);
+inSoTheoDieuKien(inSoLe);
+
