@@ -86,9 +86,60 @@ Tới một thời điểm nào đó, Hàm A sẽ được hàm B gọi lại (c
  // VIET DANG CALLBACK 2 HAM RIENG LE DANG CALLBACK
 
  /*callback tức là ta truyền một đoạn code (Hàm A) này vào một đoạn code khác (Hàm B). 
-Tới một thời điểm nào đó, Hàm A sẽ được hàm B gọi lại (callback)*/
+Tới một thời điểm nào đó, Hàm A sẽ được hàm B gọi lại (callback)
+Tham so la gia tri tuong trung cho bien de tham gia bieu thuc toan tu, nen khong can khai bao */
 
- function inSoTheoDieuKien(callback){// dong vai tro ham B
+// Cach viet tuong minh cho callback
+
+//  function inSoTheoDieuKien(callback){// dong vai tro ham B
+//     for(var i =1; i<=100; i++){
+//         const dk = callback(i);
+//         if(dk){
+//             console.log(i);// neu dieu kien dung thuc hien in ra man hinh i, neu False khong thuc hien
+//         }
+//     }
+// }
+
+//      function inSoChinhPhuong(jx){ // Dong vai tro ham A
+//         if(Math.sqrt(jx) % 1 ===0){// if(Math.sqrt(jx) % 1 ===0) trong ham A ~~ if(dk) hay If(callback(i)) trong Ham B
+//             return true;
+//         } else{
+//             return false;
+//         }
+//     }
+
+//     // function inSoChan(y){//  Dong vai tro ham A
+//     //     if(y % 2 ===0){// if( y % 2 ===0) trong ham A ~~ if(dk) hay If(callback(i)) trong Ham B
+//     //         return true;
+//     //     } else{
+//     //         return false;
+//     //     }
+//     // }
+//     // function inSoLe(y){// y cung la tham so no giong tham so // Dong vai tro ham A
+//     //     if(y % 2 ===1){// if( y % 2 ===1) trong ham A ~~ if(dk) hay If(callback(i)) trong Ham B
+//     //         return true;
+//     //     } else{
+//     //         return false;
+//     //     }
+//     // }
+
+//     function inSoChia3Du1(zz){// y cung la tham so no giong tham so // Dong vai tro ham A
+//         if(zz % 3 ===1){// if( zz % 3 ===1) trong ham A ~~ if(dk) hay If(callback(i)) trong Ham B
+//             return true;
+//         } else{
+//             return false;
+//         }
+//     }
+// // callback, y,jx, zz la tham so la gia tri tuongg trung cho bien so tham gia bieu thuc
+// // tham so khong can khai bao
+// inSoTheoDieuKien(inSoChinhPhuong); // Ham A duoc goi trong ham B
+// // inSoTheoDieuKien(inSoChan);
+// // inSoTheoDieuKien(inSoLe);
+// inSoTheoDieuKien(inSoChia3Du1);
+
+// Cach viet higher order function
+
+function inSoTheoDieuKien(callback){// dong vai tro ham B
     for(var i =1; i<=100; i++){
         const dk = callback(i);
         if(dk){
@@ -97,30 +148,9 @@ Tới một thời điểm nào đó, Hàm A sẽ được hàm B gọi lại (c
     }
 }
 
-     function inSoChinhPhuong(jx){// jx cung la tham so no giong tham so // Dong vai tro ham A
-        if(Math.sqrt(jx) % 1 ===0){
-            return true;
-        } else{
-            return false;
-        }
-    }
+inSoTheoDieuKien(function(i){// function vo danh vi khong co ten chi co tham so i, chi su dung tuc thoi khong tai su dung
+if(i % 3 ===1) return true
+    return false
+});
 
-    function inSoChan(y){// jx cung la tham so no giong tham so // Dong vai tro ham A
-        if(y % 2 ===0){
-            return true;
-        } else{
-            return false;
-        }
-    }
-    function inSoLe(y){// jx cung la tham so no giong tham so // Dong vai tro ham A
-        if(y % 2 ===1){
-            return true;
-        } else{
-            return false;
-        }
-    }
-
-inSoTheoDieuKien(inSoChinhPhuong);
-inSoTheoDieuKien(inSoChan);
-inSoTheoDieuKien(inSoLe);
-
+     
