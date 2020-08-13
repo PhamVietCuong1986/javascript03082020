@@ -294,11 +294,33 @@ Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
 //   })();
 // }
 //hay viet theo kieu dang duoi day
-for (var i = 1 ; i <=5;i++){
-  (function(j){var j = i;
-    setTimeout(function timer(){
-      console.log(j);
-    }, j*1000)// closure dong kin bien j cua ham timer
-  })(i);
-}
+// for (var i = 1 ; i <=5;i++){
+//   (function(j){var j = i;
+//     setTimeout(function timer(){
+//       console.log(j);
+//     }, j*1000)// closure dong kin bien j cua ham timer
+//   })(i);
+// }
 
+// BLOCK SCOPING VOI VARIABLE LET
+
+// Khai bao LET trong 1 block {let..} de chung ta co the dong block do
+//  for (var i =1; i <= 5;i++){ //bat dau cho 1 block dong kin
+//    let j = i; setTimeout(function timer(){}
+//      console.log(j);
+//    }, j*1000);//} ket thuc cho 1 block dong kin
+//  }
+
+//  for (let i = 1; i <=5;i++){
+//    let j = i; setTimeout(function timer(){
+//      console.log(j)
+     
+//    }, j *1000);
+//  }
+ // viet gon hon khi dung LET khai bao bien i khong can them bien J
+
+ for (let i = 1; i <= 5; i++){
+   setTimeout(function(){
+     console.log(i);
+   }, i *1000);
+ }
