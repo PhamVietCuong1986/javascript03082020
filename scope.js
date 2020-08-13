@@ -374,17 +374,30 @@ Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
 
 // Bien ham module mau thanh IIFE
 
-var foo = (function coolModule(){
-  var something = "cool";
-  var another = [1,2,3];
-  function doSomething(){
-    console.log(something);
-  };
-  function doAnother(){
-    console.log(another.join(" ! "));
-    }
-    return { doSomething: doSomething ,
-             doAnother: doAnother};
-})();
-foo.doSomething();
-foo.doAnother();
+// var foo = (function coolModule(){
+//   var something = "cool";
+//   var another = [1,2,3];
+//   function doSomething(){
+//     console.log(something);
+//   };
+//   function doAnother(){
+//     console.log(another.join(" ! "));
+//     }
+//     return { doSomething: doSomething ,
+//              doAnother: doAnother};
+// })();
+// foo.doSomething();
+// foo.doAnother();
+
+// truyen tham so vao
+
+function coolModule(id){
+  function Identifier(){
+    console.log(id + " i love JS");
+  }
+  return { Identifier: Identifier};
+}
+var foo1 =coolModule("foo 1");//gan gia tri cho tham so Id = "foo 1"
+var foo2 =coolModule("foo 2");//gan gia tri cho tham so Id = "foo 2"
+foo1.Identifier();//"foo 1 ILOVE jS"
+foo2.Identifier();// "foo 2 I LOVE jS"
