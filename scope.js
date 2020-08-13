@@ -432,19 +432,81 @@ Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
 
 // doan code theo doi module theo ten
 
-var Mymodule = (function manager(){
-  var modules = {};
-  function defineName( name, deps, impl){
-    for (var i = 0; i <= deps.length; i++){
-      deps[i] = module(deps[i]);
-      modules name = impl.apply(impl, deps);
-      }
-      function get(name) = {
-        return modules[name];
-        }   
-  } return {
-    define: define,
-    get: get
-  }
-})();
+// var Mymodule = (function manager(){
+//   var modules = {};
+//   function define( name, deps, impl){
+//     for (var i = 0; i <= deps.length; i++){
+//       deps[i] = module(deps[i]);
+//       modules name = impl.apply(impl, deps);
+//       }
+//       function get(name) = {
+//         return modules[name];
+//         }   
+//   } return {
+//     define: define,
+//     get: get
+//   }
+// })();
+
+// // function square(number) {
+//   return number * number;
+// }
+// Hàm square nhận 1 tham số, có tên là number. 
+// Hàm này bao gồm một câu lệnh mà nó sẽ trả về tham số (number) nhân với chính nó. 
+// Câu lệnh return chỉ định giá trị được trả lại bới hàm.
+
+// MyModules.define("bar",[], function() {
+//   function hello(who){
+//     return "let me introduce: " + who;
+//   };
+//   return{
+//     hello: hello
+//   };
+// });
+// MyModules.define("foo", ["bar"], function (bar){
+//   var hungry = " hippo";
+//   function awesome(){
+//     console.log(bar.hello(hungry).toUpperCase());
+//       }
+//       return{
+//         awesome: awesome
+//       };
+// });
+// var bar = MyModules.get("bar");
+// var foo = MyModules.get("foo");
+// console.log(bar.hello("hippo"));//
+// foo.awesome();
+
+// MODULE tuong lai
+
+
+// SERIES 2- PHUC LUC A -  SCOPE DYNAMID -DONG KIN DONG
+
+// functionc foo(){
+//   console.log(a);
+// }
+// // function bar(){
+// //   var a =3;
+// //   foo();
+// // }
+// var a = 2;
+// // bar();
+
+
+// Phuc luc C -LEXICAL -THIS
+// viet kieu nay chua chuan
+
+// var obj = {
+//   id: "chuan",
+//   cool: function coolFn(){
+//     console.log(this.id);
+//   }
+// };
+// var id = "chua chuan";
+// obj.cool();// chuan
+// setTimeout(obj.cool , 1000);//chua chuan
+
+
+
+
 

@@ -79,7 +79,7 @@
    */
   
     //10. ARRAY METHOD
-const numbers = [5,1,2,3,4]
+// const numbers = [5,1,2,3,4]
 // them phan tu o cuoi
 // numbers.push(10)
 // console.log(numbers)
@@ -92,7 +92,9 @@ const numbers = [5,1,2,3,4]
 // xoa phan tu o giua
 // numbers.splice(1,1)
 // them phan tu o giua
+// them phan tu tu dau den cuoi la so duong, tu cuoi tro ve la so am
+
 // numbers.splice(0,0,10)
-numbers.splice(-1,0,10)
-console.log(numbers)
+// numbers.splice(-1,0,10)
+// console.log(numbers)
 
