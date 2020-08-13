@@ -139,18 +139,35 @@ Tham so la gia tri tuong trung cho bien de tham gia bieu thuc toan tu, nen khong
 
 // Cach viet higher order function
 
-function inSoTheoDieuKien(callback){// dong vai tro ham B
-    for(var i =1; i<=100; i++){
-        const dk = callback(i);
-        if(dk){
-            console.log(i);// neu dieu kien dung thuc hien in ra man hinh i, neu False khong thuc hien
-        }
-    }
-}
+// function inSoTheoDieuKien(callback){// dong vai tro ham B
+//     for(var i =1; i<=100; i++){
+//         const dk = callback(i);
+//         if(dk){
+//             console.log(i);// neu dieu kien dung thuc hien in ra man hinh i, neu False khong thuc hien
+//         }
+//     }
+// }
 
-inSoTheoDieuKien(function(ix){// function vo danh vi khong co ten chi co tham so i, chi su dung tuc thoi khong tai su dung
-if(ix % 2 ===1){ return true}
-   else{ return false}
-});
+// inSoTheoDieuKien(function(ix){// function vo danh vi khong co ten chi co tham so i, chi su dung tuc thoi khong tai su dung
+// if(ix % 2 ===1){ return true}
+//    else{ return false}
+// });
 
      
+// proto.type.map
+//Phuong thuc MAP giup tao ra mot mang ARRAY moi bang cach thuc thi mot ham len tung phan tu mang duoc goi
+//MAP la ham dang callback tao ra bang moi khong gi de vao mang duoc goi, khong thay doi kich thuoc mang
+
+// const arrayNums = [1,2,3,4,6];
+// for(var i = 0;i < arrayNums.length; i++){
+//     arrayNums[i] = arrayNums[i] * 2;
+// }
+// console.log(arrayNums);
+
+const arrayNums = [1,2,3,4,6];
+
+const newArraynums = arrayNums.map(function(value , index){
+        return value * 2;
+});
+console.log(newArraynums);
+
