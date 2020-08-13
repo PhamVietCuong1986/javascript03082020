@@ -319,8 +319,51 @@ Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
 //  }
  // viet gon hon khi dung LET khai bao bien i khong can them bien J
 
- for (let i = 1; i <= 5; i++){
-   setTimeout(function(){
-     console.log(i);
-   }, i *1000);
+//  for (let i = 1; i <= 5; i++){
+//    setTimeout(function(){
+//      console.log(i);
+//    }, i *1000);
+//  }
+ // CALLBACK function trong JS la khi ham a duoc truyen vao trong ham b, ham a nhu la 1 tham so cua b
+ // Ham a la CALLBACK, ham b goi HIGH ORDER
+
+
+ //MODULE 
+ // tao nhung mau closure dang CALLBACK FUNCTION
+
+ //lexical scope la khong gian bien trong ham
+ // block scope la khong gian bien trong block {}
+//  function foo(){
+//    var something = "cool";
+//    var another = [1,2,3];
+//    function doSomething(){
+//      console.log(something);
+//    }
+//    function doAnother(){
+//      console.log(another.join(" ! "));
+//    }
+//  }
+//  foo();
+ // doan code tren chua co observal closure
+ 
+ // Mau MODULE PATTERN - MAU MODUN
+ // vi du dien hinh cau truc module sau:
+
+ function coolModule(){
+  var something = "cool";
+  var another = [1,2,3];
+  function doSomething(){
+    console.log(something);
+  }
+  function doAnother(){
+    console.log(another.join(" ! "));
+  }
+  return{ doSomething: doSomething,
+          doAnother: doAnother};// dang OBJECT co key {key:..., key:...}
+
  }
+ var foo = coolModule();
+ foo.doSomething();// cool
+ foo.doAnother();//[1,2,3]
+
+
