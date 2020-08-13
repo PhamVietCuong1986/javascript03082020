@@ -349,21 +349,42 @@ Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
  // Mau MODULE PATTERN - MAU MODUN
  // vi du dien hinh cau truc module sau:
 
- function coolModule(){
+//  function coolModule(){// day dc goi la module mau coolModule
+//   var something = "cool";
+//   var another = [1,2,3];
+//   function doSomething(){
+//     console.log(something);
+//   }
+//   function doAnother(){
+//     console.log(another.join(" ! "));
+//   }
+//   return{ doSomething: doSomething,
+//           doAnother: doAnother};// dang OBJECT co key {key:..., key:...}
+
+//  }
+//  var foo = coolModule();// gan bien ben ngoai cho ham module
+//  foo.doSomething();// cool
+//  foo.doAnother();//[1,2,3]
+
+// API (Application Programming Interface) Giao dien lap trinh ung dung
+
+// Hai dac diem cua 1 mau MODULE
+//1. No phai la ham bao ben ngoai
+//2. Ham ben ngoai phai tra it nhat 1 gia tri ham ben trong
+
+// Bien ham module mau thanh IIFE
+
+var foo = (function coolModule(){
   var something = "cool";
   var another = [1,2,3];
   function doSomething(){
     console.log(something);
-  }
+  };
   function doAnother(){
     console.log(another.join(" ! "));
-  }
-  return{ doSomething: doSomething,
-          doAnother: doAnother};// dang OBJECT co key {key:..., key:...}
-
- }
- var foo = coolModule();
- foo.doSomething();// cool
- foo.doAnother();//[1,2,3]
-
-
+    }
+    return { doSomething: doSomething ,
+             doAnother: doAnother};
+})();
+foo.doSomething();
+foo.doAnother();
