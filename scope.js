@@ -404,24 +404,47 @@ Khai bao ham dau tien, sau do khai bao bien, tiep theo la bieu thuc thuc thi
 
 // Mot bien the cua mau Module (module pattern) la dat ten OBJECT vaf ban tra lai nhu mot API cong khai
 
-var foo = (function coolModule(id){
-  function change(){ // sua doi cong khai API
-    publicAPI.identify = identify2;
+// var foo = (function coolModule(id){
+//   function change(){ // sua doi cong khai API
+//     publicAPI.identify = identify2;// thuoc tinh identify cua publicAPI la bang identify2
+//   }
+//   function identify1(){
+//     console.log(id);// ham identify1 la cho hien thi tham so "id"
+//   }
+//   function identify2(){
+//     console.log(id.toUpperCase());// ham identify2 cho hien thi thuoc tinh viet hoa tat ca cua "id"
+//   }
+//   var publicAPI = {// khai bao object publicAPI goom 2 thuoc tinh
+//     change: change,
+//     identify: identify1
+//   };
+//   return publicAPI;
+// })(" i know ");// gan gia tri cho tham so id = " i know "
+// foo.identify();// " i know"
+// foo.change();
+// foo.identify();// I KNOW
+// foo.identify();
+// foo.identify();
+
+// MODULE HIEN DAI
+
+// lap trinh sao cho khi goi, quan ly theo thu vien MODULE mot cach de dang, don gian
+
+// doan code theo doi module theo ten
+
+var Mymodule = (function manager(){
+  var modules = {};
+  function defineName( name, deps, impl){
+    for (var i = 0; i <= deps.length; i++){
+      deps[i] = module(deps[i]);
+      modules name = impl.apply(impl, deps);
+      }
+      function get(name) = {
+        return modules[name];
+        }   
+  } return {
+    define: define,
+    get: get
   }
-  function identify1(){
-    console.log(id);
-  }
-  function identify2(){
-    console.log(id.toUpperCase());
-  }
-  var publicAPI = {
-    change: change,
-    identify: identify1
-  };
-  return publicAPI;
-})(" i know ");// gan gia tri cho tham so id = " i know "
-foo.identify();// " i know"
-foo.change();
-foo.identify();// I KNOW
-foo.identify();
-foo.identify();
+})();
+
