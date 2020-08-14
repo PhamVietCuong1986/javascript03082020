@@ -173,36 +173,96 @@ Tham so la gia tri tuong trung cho bien de tham gia bieu thuc toan tu, nen khong
 
 
 // Make an array of strings of the names
-function namesOnly(arr) {
-    const newArr = arr.map(function(value , index){
-        return value.name
-    })
-  }
-    console.log(newArr);
+// function namesOnly(arr) {
+//     const newArr = arr.map(function(value , index){// value va index cua mang arr va value cac phan tu gia tri value ={ name ,age} 2 thuoc tinh
+//         return value.name
+//     })
+//     console.log(newArr)
+//   }
     
-// bo cai ham funtion thi phan con lai tre tuong duong voi duoi day ~~~//phan doan [] tuong duong arr
-namesOnly([
-  {
-    name: "Angelina Jolie",
-    age: 80
-  },
-  {
-    name: "Eric Jones",
-    age: 2
-  },
-  {
-    name: "Paris Hilton",
-    age: 5
-  },
-  {
-    name: "Kayne West",
-    age: 16
-  },
-  {
-    name: "Bob Ziroll",
-    age: 100
-  }
-])
-// ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"]
+    
+// // bo cai ham funtion thi phan con lai tre tuong duong voi duoi day ~~~
+// namesOnly([//phan doan [] tuong duong arr
+//   {
+//     name: "Angelina Jolie",
+//     age: 80
+//   },
+//   {
+//     name: "Eric Jones",
+//     age: 2
+//   },
+//   {
+//     name: "Paris Hilton",
+//     age: 5
+//   },
+//   {
+//     name: "Kayne West",
+//     age: 16
+//   },
+//   {
+//     name: "Bob Ziroll",
+//     age: 100
+//   }
+// ])
+// // ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"]
 
 
+// VIET MAP RIENG CHO FUNCTION
+// cach viet ham map
+
+// Array.prototype.myMap = function(callback){
+//   const newArr = [];
+//   for ( var index = 0; index < this.length, index++){
+//     newArr.push(callback(this[index], index))
+//   }
+//   return newArr
+// }
+
+
+// function namesOnly(arr) {
+//     const newArr = arr.myMap(function(value , index){
+//         return value.name
+//     })
+//     console.log(newArr)
+//   }
+    
+    
+
+// namesOnly([
+//   {
+//     name: "Angelina Jolie",
+//     age: 80
+//   },
+//   {
+//     name: "Eric Jones",
+//     age: 2
+//   },
+//   {
+//     name: "Paris Hilton",
+//     age: 5
+//   },
+//   {
+//     name: "Kayne West",
+//     age: 16
+//   },
+//   {
+//     name: "Bob Ziroll",
+//     age: 100
+//   }
+// ])
+
+
+// Ham FILTER
+// Dung de lay gia tri cua mang doi vao mang moi
+
+const arrayPerson = [
+  { name : "teo", age: 5},
+  { name : "khoa", age: 9},
+  { name : "long", age: 7},
+  { name : "hao", age: 10}
+]
+const newArrayPerson = arrayPerson.filter(function(value ,index){// value = {name , age}
+  if (value.age > 5) return true
+  return false
+})
+console.log(newArrayPerson);
