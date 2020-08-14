@@ -174,13 +174,13 @@ Tham so la gia tri tuong trung cho bien de tham gia bieu thuc toan tu, nen khong
 
 // Make an array of strings of the names
 function namesOnly(arr) {
-    const newArr = arr.map(function(person , index){
-        return person.name
+    const newArr = arr.map(function(value , index){
+        return value.name
     })
+  }
     console.log(newArr);
-
-} 
-
+    
+// bo cai ham funtion thi phan con lai tre tuong duong voi duoi day ~~~//phan doan [] tuong duong arr
 namesOnly([
   {
     name: "Angelina Jolie",
