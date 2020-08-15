@@ -33,17 +33,26 @@
 // totalVotes(voters) // 7// gan tham so arr =voters
 // vi du 2
 // [a:3 , b:2,c:1]
-function countOccurrences(arr){
-return arr.reduce((total, cur) => {
-    if(total[cur]) {
-        total[cur] += 1
-    } else{
-        total[cur] = 1
-    } return total
-},{});
-}
-console.log(countOccurrences(["a", "b", "c", "b", "a", "a"]));
+// function countOccurrences(arr){
+// return arr.reduce((total, cur) => {
+//     if(total[cur]) {
+//         total[cur] += 1
+//     } else{
+//         total[cur] = 1
+//     } return total
+// },{});
+// }
+// console.log(countOccurrences(["a", "b", "c", "b", "a", "a"]));
 
+
+// Ham SORT
+
+const arrnumbers = [15,5,6,8,9,7,11];
+arrnumbers.sort(function(a , b){
+// return b - a
+return a - b
+})
+console.log(arrnumbers);
 
 
 
