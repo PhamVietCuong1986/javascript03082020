@@ -32,6 +32,18 @@
 // ];
 // totalVotes(voters) // 7// gan tham so arr =voters
 // vi du 2
+// (param1, param2, …, paramN) => { statements }
+// (param1, param2, …, paramN) => expression
+// // tương đương với: (param1, param2, …, paramN) => { return expression; }
+
+// // Dấu ngoặc đơn không bắt buộc khi chỉ có một tham số truyền vào:
+// (singleParam) => { statements }
+// singleParam => { statements }
+
+// // Hàm khi không có tham số truyền vào bắt buộc phải là dấu ():
+// () => { statements }
+// () => expression // tương đương: () => { return expression; }
+
 // [a:3 , b:2,c:1]
 // function countOccurrences(arr){
 // return arr.reduce((total, cur) => {
@@ -47,12 +59,37 @@
 
 // Ham SORT
 
-const arrnumbers = [15,5,6,8,9,7,11];
-arrnumbers.sort(function(a , b){
-// return b - a
-return a - b
-})
-console.log(arrnumbers);
+// const arrnumbers = [15,5,6,8,9,7,11];
+// arrnumbers.sort(function(a , b){
+// // return b - a
+// return a - b
+// })
+// console.log(arrnumbers);
+
+
+//15. declaration class// Lop doi tuong
+// tap the doi tuong co thuoc tinh vaf hanh vi ging nhau
+// function constructor de dinh nghia class
+function Person(name , age){
+    this.name = name; // this dai dien lop Person
+    this.age = age;
+    this.Printname = function(){
+        console.log(name);
+    }
+}
+Person.prototype.address = null;
+Person.prototype.printAge = function(){
+    return this.age;
+};
+
+// vi du
+const teo = new Person("nguyen van teo" , 20)// new tuong trung cho viec khoi tao chi su dung cho constructor//class
+teo.address = "quan 10"
+console.log(teo.printAge())
+
+
+// them thuoc tinh cho class ta dung tu khoa PROTOTYPE
+// PROTOTYPE cac thuoc tinh dung chung
 
 
 

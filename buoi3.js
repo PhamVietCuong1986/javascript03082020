@@ -255,14 +255,14 @@ Tham so la gia tri tuong trung cho bien de tham gia bieu thuc toan tu, nen khong
 // Ham FILTER
 // Dung de lay gia tri cua mang doi vao mang moi
 
-const arrayPerson = [
-  { name : "teo", age: 5},
-  { name : "khoa", age: 9},
-  { name : "long", age: 7},
-  { name : "hao", age: 10}
-]
-const newArrayPerson = arrayPerson.filter(function(value ,index){// value = {name , age}
-  if (value.age > 5) return true
-  return false
-})
-console.log(newArrayPerson);
+// const arrayPerson = [
+//   { name : "teo", age: 5},
+//   { name : "khoa", age: 9},
+//   { name : "long", age: 7},
+//   { name : "hao", age: 10}
+// ]
+// const newArrayPerson = arrayPerson.filter(function(value ,index){// value = {name , age}
+//   if (value.age > 5) return true
+//   return false
+// })
+// console.log(newArrayPerson);
