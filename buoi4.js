@@ -93,16 +93,51 @@
 
 // 16. CLASS
 
-class Person {
-    constructor(name , age){
-        this.name = name;
-        this.age = age;
-    }
-    showname(){
-        console.log(name);
+// class Person {
+//     constructor(name , age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     showname(){
+//         console.log(name);
+//     }
+// }
+//  const teo = new Person("nguyen nam teo" , 20);
+//  console.log(teo);
+
+
+// 17 SCOPE la 1 block {}
+/* Ham thuc thi uu tien tim trong scope {} truoc sau do neu khong thuc thi dc no tim ra ben ngoai scope
+*/
+// const a = 10;
+// function random(){
+//     var a =1;
+    
+// }
+// console.log(a);
+// random()// () ham thuc thi
+
+// function random(){
+//     this.a = 10 // Bien This.a la pham vi global SCOPE
+//     const b = function(){
+//         const c = function(){
+//             console.log(this.a);
+//         }
+//         c();
+//     }
+//     b();
+// }
+// random();
+// context - Boi canh
+const teo = {
+    name : "nguyen van teo",
+    age : 20,
+    showname : function(){// showname la 1 thuoc tinh cua teo la luu vao local scope
+        const b = function(){
+            console.log(this.name);// name laf pham vi local vung nho khac voi Showname vi 2 thuoc tinh khac nhau cua OBJECT "teo"
+        }
+        b()
     }
 }
- const teo = new Person("nguyen nam teo" , 20);
- console.log(teo);
- 
+teo.showname();
 
