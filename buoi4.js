@@ -129,15 +129,19 @@
 // }
 // random();
 // context - Boi canh
-const teo = {
-    name : "nguyen van teo",
-    age : 20,
-    showname : function(){// showname la 1 thuoc tinh cua teo la luu vao local scope
-        const b = function(){
-            console.log(this.name);// name laf pham vi local vung nho khac voi Showname vi 2 thuoc tinh khac nhau cua OBJECT "teo"
-        }
-        b()
-    }
-}
-teo.showname();
+// const teo = {
+//     name : "nguyen van teo",
+//     age : 20,
+//     showname : function(){// showname la 1 thuoc tinh cua teo la luu vao local scope
+//         const b = function(){
+//             console.log(this.name);// name laf pham vi local vung nho khac voi Showname vi 2 thuoc tinh khac nhau cua OBJECT "teo"
+//         }
+//         b()
+//     }
+// }
+// teo.showname();
+
+//18. Khoi tao bien hay khai bao bien 
+// var, const, let
+
 
