@@ -70,27 +70,39 @@
 //15. declaration class// Lop doi tuong
 // tap the doi tuong co thuoc tinh vaf hanh vi ging nhau
 // function constructor de dinh nghia class
-function Person(name , age){
-    this.name = name; // this dai dien lop Person
-    this.age = age;
-    this.Printname = function(){
-        console.log(name);
-    }
-}
-Person.prototype.address = null;
-Person.prototype.printAge = function(){
-    return this.age;
-};
+// function Person(name , age){
+//     this.name = name; // this dai dien lop Person
+//     this.age = age;
+//     this.Printname = function(){
+//         console.log(name);
+//     }
+// }
+// Person.prototype.address = null;
+// Person.prototype.printAge = function(){
+//     return this.age;
+// };
 
-// vi du
-const teo = new Person("nguyen van teo" , 20)// new tuong trung cho viec khoi tao chi su dung cho constructor//class
-teo.address = "quan 10"
-console.log(teo.printAge())
+// // vi du
+// const teo = new Person("nguyen van teo" , 20)// new tuong trung cho viec khoi tao chi su dung cho constructor//class
+// teo.address = "quan 10"
+// console.log(teo.printAge())
 
 
 // them thuoc tinh cho class ta dung tu khoa PROTOTYPE
 // PROTOTYPE cac thuoc tinh dung chung
 
+// 16. CLASS
 
-
+class Person {
+    constructor(name , age){
+        this.name = name;
+        this.age = age;
+    }
+    showname(){
+        console.log(name);
+    }
+}
+ const teo = new Person("nguyen nam teo" , 20);
+ console.log(teo);
+ 
 
