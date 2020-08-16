@@ -25,13 +25,25 @@
 // bien toan cuc khong nam trong {} nao ca
 //
 
+// if(true){
+//     var a = 5 // khong tuan thu pham vi scope
+//     console.log(a)//5
+// }
+// console.log(a)//5 day chinh su nguy hiem cua khai bien dung VAR vi no hieu duoc ngoai pham vi scope {}
+
+// for(var index = 0; index < 10; index++){
+//     console.log(index + " trong for");
+// // }
+// console.log(index);
+ 
+// let
 if(true){
-    var a = 5 // khong tuan thu pham vi scope
+    let a = 5 // khong tuan thu pham vi scope
     console.log(a)//5
 }
 console.log(a)//5 day chinh su nguy hiem cua khai bien dung VAR vi no hieu duoc ngoai pham vi scope {}
 
-for(var index = 0; index < 10; index++){
+for(let index = 0; index < 10; index++){
     console.log(index + " trong for");
 }
 console.log(index);
